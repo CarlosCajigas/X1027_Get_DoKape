@@ -30,7 +30,7 @@ Invoke-WebRequest -Uri http://$webhost/KAPE.zip -OutFile .\KAPE.zip
 Expand-Archive -Path .\KAPE.zip
 
 #This runs the Kape command of your choice
-KAPE\KAPE\kape.exe --tsource C: --tdest C:\temp\kape\collect --tflush --target PowerShellConsole --scs $webhost --scp 1034 --scu collect --scpw 0788a6922bd5f9f130e7ed8980193bab --vhdx host --mdest C:\temp\kape\process --mflush --zm true --module NetworkDetails,PWSH-Get-ProcessList --mef csv --gui
+KAPE\KAPE\kape.exe --tsource C: --tdest C:\temp\kape\collect --tflush --target PowerShellConsole --scs $webhost --scp 22 --scu user --scpw 12345678 --vhdx host --mdest C:\temp\kape\process --mflush --zm true --module NetworkDetails,PWSH-Get-ProcessList --mef csv --gui
 
 #This removes the kape directory for cleaning purposes
 Remove-Item .\KAPE\ -Recurse -Confirm:$false -Force
